@@ -1,9 +1,9 @@
-const cacheName = "Ruan Patrick-ModTrip-0.1.4";
+const cacheName = "Ruan Patrick-ModTrip-0.1.5";
 const contentToCache = [
-    "Build/0.1.4_ModTrip_WebBuild_(attach_image_script).loader.js",
-    "Build/0.1.4_ModTrip_WebBuild_(attach_image_script).framework.js",
-    "Build/0.1.4_ModTrip_WebBuild_(attach_image_script).data",
-    "Build/0.1.4_ModTrip_WebBuild_(attach_image_script).wasm",
+    "Build/0.1.5_ModTrip_WebBuild_(management_shortcut).loader.js",
+    "Build/0.1.5_ModTrip_WebBuild_(management_shortcut).framework.js",
+    "Build/0.1.5_ModTrip_WebBuild_(management_shortcut).data",
+    "Build/0.1.5_ModTrip_WebBuild_(management_shortcut).wasm",
     "TemplateData/style.css"
 
 ];
