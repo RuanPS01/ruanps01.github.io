@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./personal-data.css">
+    <script src="/app.js" type="text/javascript" defer></script>
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <script src="./personal-data.js" type="text/javascript" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados pessoais</title>
+</head>
+
+<body>
+    <main id="personalData">
+        <div id="leftPanel">
+            <button onclick="goTo('/pages/personal-data/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-user"></i>
+            </button>
+            <button onclick="goTo('/pages/experiences/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-work-alt"></i>
+            </button>
+            <button onclick="goTo('/pages/academic-life/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-pen"></i>
+            </button>
+            <button onclick="goTo('/pages/projects/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-album"></i>
+            </button>
+            <button onclick="goTo('/pages/tech-skills/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-card-diamonds"></i>
+            </button>
+            <button onclick="goTo('/pages/extra-skills/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-card-hearts"></i>
+            </button>
+            <button onclick="goTo('/pages/tech-map/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-display-grid"></i>
+            </button>
+            <button onclick="goTo('/pages/hobbies/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-games"></i>
+            </button>
+        </div>
+        <img id="smallProfileImage" src="" />
+        <div id="content">
+            <button id="backButton" onclick="showHome()" style="width: fit-content;">
+                <span class="line-md--arrow-left-circle"></span>
+                <p>Voltar</p>
+            </button>
+            <section>
+                <div id="header">
+                    <h2>Dados Pessoais</h2>
+                </div>
+
+                <div id="container">
+                    <div class="card">
+                        <div class="cardContent">
+                            <h3>{{value}}</h3>
+                        </div>
+                        <div class="cardFooter">
+                            <span class="copyButton" onclick="copyToClipboard('{{value}}')">
+                                <i class="gg-copy" style="scale: 0.6"></i>
+                                <a>Copiar</a>
+                            </span>
+                            <div class="labelCard">
+                                <p>{{key}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

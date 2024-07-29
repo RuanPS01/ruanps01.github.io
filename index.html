@@ -1,9 +1,106 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<body style="background-color: black;">
-    <iframe width="100%" height="100%"
-        src="https://relogioonline.com.br/embed/cronometro/#enabled=0&msec=7500&laps=4783.5605&theme=1&color=4&format=3"
-        frameborder="0" allowfullscreen></iframe>
+<head>
+    <title>Ruan Patrick</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="app.js" type="text/javascript" defer></script>
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="backgroundDiv"></div>
+    <main id="home">
+        <header>
+            <div id="leftDivisionHeader">
+                <a id="github" class="line-md--github-loop" href="" target="blank"></a>
+            </div>
+            <h1>{{name}}</h1>
+            <div id="rightDivisionHeader">
+                <a id="linkedin" class="line-md--linkedin" href="" target="blank"></a>
+            </div>
+        </header>
+        <div class=" centerPanel">
+            <div class="panelColumn">
+                <button onclick="goTo('/pages/personal-data/index.html')" style="margin-right: -70px;">
+                    <i class="gg-user"></i>
+                    <p>Dados Pessoais</p>
+                </button>
+                <button onclick="goTo('/pages/experiences/index.html')">
+                    <i class="gg-work-alt"></i>
+                    <p>Experiência</p>
+                </button>
+                <button onclick="goTo('/pages/academic-life/index.html')">
+                    <i class="gg-pen"></i>
+                    <p>Vida acadêmica</p>
+                </button>
+                <button onclick="goTo('/pages/projects/index.html')" style="margin-right: -80px;">
+                    <i class="gg-album"></i>
+                    <p>Projetos</p>
+                </button>
+            </div>
+            <img id="profileImage" src="" />
+            <div class="panelColumn">
+                <button onclick="goTo('/pages/tech-skills/index.html')" style="margin-left: -70px;">
+                    <p>Habilidades técnicas</p>
+                    <i class="gg-card-diamonds"></i>
+                </button>
+                <button onclick="goTo('/pages/extra-skills/index.html')">
+                    <p>Habilidades extras</p>
+                    <i class="gg-card-hearts"></i>
+                </button>
+                <button onclick="goTo('/pages/tech-map/index.html')">
+                    <p>Mapa de tecnologias</p>
+                    <i class="gg-display-grid"></i>
+                </button>
+                <button onclick="goTo('/pages/hobbies/index.html')" style="margin-left: -80px;">
+                    <p>Passa-tempos</p>
+                    <i class="gg-games"></i>
+                </button>
+
+            </div>
+        </div>
+        <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
+        <button onclick="sendMessageDialog.showModal()">
+            <p>Enviar uma mensagem</p>
+            <i class="gg-mail"></i>
+        </button>
+        <p>-</p>
+    </main>
+    <dialog id="sendMessageDialog">
+        <main id="dialogContent">
+            <span class="ion--logo-whatsapp"></span>
+            <h2>Vamos conversar?</h2>
+            <p>Você será redirecionado para o Whatsapp. Escreva sua mensagem e clique em enviar. Respondo assím que
+                possível. Fique a vontade!</p>
+            <form onsubmit="sendMessage(); event.preventDefault();">
+                <label for="name">Seu nome:</label>
+                <input type="text" id="name" name="name">
+                <label for="message">Sua mensagem:</label>
+                <textarea id="message" name="message"></textarea>
+                <footer>
+                    <button onclick="sendMessageDialog.close(); event.stopPropagation(); return false;">
+                        Fechar
+                        <i class="gg-close-o"></i>
+                    </button>
+                    <button type="submit">
+                        Enviar
+                        <i class="gg-mail"></i>
+                    </button>
+                </footer>
+            </form>
+
+        </main>
+    </dialog>
 </body>
 
 </html>

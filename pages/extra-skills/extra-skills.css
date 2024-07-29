@@ -1,0 +1,61 @@
+#extraSkills {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 20px;
+    display: flex;
+    position: absolute;
+    align-items: start;
+    justify-content: start;
+    background-image: linear-gradient(to bottom, #ffd50015, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
+}
+
+#content {
+    width: 100%;
+    padding: 1%;
+    padding-left: 8vw;
+}
+
+#header {
+    gap: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    padding: 2% 0% 0% 2%;
+    justify-content: space-between;
+}
+
+#container {
+    gap: 20px;
+    display: flex;
+    padding: 0% 2%;
+    flex-wrap: wrap;
+    align-items: start;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.card {
+    width: 450px;
+    display: flex;
+    overflow: hidden;
+    align-items: start;
+    border-radius: 1.6vh;
+    flex-direction: column;
+    background-color: #272727;
+    justify-content: space-between;
+}
+
+.cardContent {
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+}
+
+.labelCard {
+    width: 100%;
+    text-align: end;
+    font-size: 1.2vw;
+    line-height: 30%;
+    padding-right: 20px;
+}

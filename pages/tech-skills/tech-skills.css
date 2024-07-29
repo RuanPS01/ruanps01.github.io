@@ -1,0 +1,85 @@
+#personalData {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 20px;
+    display: flex;
+    position: absolute;
+    align-items: start;
+    justify-content: start;
+    background-image: linear-gradient(to bottom, #ffd50015, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
+}
+
+#content {
+    width: 100%;
+    padding: 1%;
+    padding-left: 8vw;
+}
+
+#header {
+    gap: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    padding: 2% 0% 0% 2%;
+    justify-content: space-between;
+}
+
+#container {
+    gap: 20px;
+    display: flex;
+    padding: 0% 2%;
+    flex-wrap: wrap;
+    align-items: start;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.skillCard {
+    width: 300px;
+    display: flex;
+    overflow: hidden;
+    align-items: start;
+    border-radius: 1.6vh;
+    flex-direction: column;
+    background-color: #272727;
+    justify-content: space-between;
+}
+
+.skillCardContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: fit-content;
+    padding: 10px 0px;
+}
+
+.skillCardFooter {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    flex-direction: row;
+    background-color: #1b1b1b;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+
+
+.skillCardDot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffd500;
+}
+
+.skillCardEmptyDot {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ffd50015;
+}

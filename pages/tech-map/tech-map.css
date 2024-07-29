@@ -1,0 +1,41 @@
+#techMap {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 20px;
+    display: flex;
+    position: absolute;
+    align-items: start;
+    justify-content: start;
+    background-image: linear-gradient(to bottom, #ffd50015, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
+}
+
+#content {
+    width: 100%;
+    padding: 1%;
+    padding-left: 8vw;
+}
+
+#header {
+    gap: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    padding: 2% 0% 0% 2%;
+    justify-content: space-between;
+}
+
+#container {
+    gap: 60px;
+    display: flex;
+    padding: 0% 2%;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.skillIcon {
+    filter: drop-shadow(0px 0px 10px #fee45131);
+}

@@ -1,0 +1,380 @@
+body {
+    color: white;
+    background-color: #0f0f0f;
+}
+
+.backgroundDiv {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, #000000, #0f0f0f, #181818, #0a0a0a, #000000);
+}
+
+#home {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-image: linear-gradient(to right, #ffd5000c, #ffd50041);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 4%;
+    text-align: center;
+    border-radius: 1vh;
+}
+
+#leftDivisionHeader {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rightDivisionHeader {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profileImage {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 30vw;
+    border: 4px solid white;
+    box-shadow: 0 0 10px #fee45186;
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 0 0 0px #fee45186;
+    animation: growAndShrink 1s ease-in-out infinite alternate;
+}
+
+@keyframes growAndShrink {
+    from {
+        box-shadow: 0 0 0px #fee45186;
+    }
+
+    to {
+        box-shadow: 0 0 20px #fee45186;
+    }
+}
+
+h1 {
+    font-size: 4vh;
+    font-family: "Raleway", sans-serif;
+}
+
+h2 {
+    font-size: 2vh;
+    font-family: "Raleway", sans-serif;
+}
+
+h3 {
+    font-size: 2vh;
+    font-family: "Raleway", sans-serif;
+}
+
+p,
+a {
+    font-size: 1.4vh;
+    font-family: "Raleway", sans-serif;
+}
+
+button {
+    gap: 10px;
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 2.6vh;
+    padding: 0px 20px;
+    border-radius: 10vh;
+    align-items: center;
+    border: 0px solid white;
+    background-color: #ffce2e;
+    background-image: linear-gradient(to right, #fee451, #dfb21e);
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: entranceButton 0.5s ease-in-out forwards;
+}
+
+@keyframes entranceButton {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+button:hover {
+    box-shadow: 0 0 10px #fee45186;
+    transform: scale(1.05);
+}
+
+button:active {
+    box-shadow: 0 0 10px #fee45186;
+    transform: scale(0.9);
+}
+
+.panelColumn {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centerPanel {
+    gap: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-md--github-loop {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cmask id='lineMdGithubLoop0' width='24' height='24' x='0' y='0'%3E%3Cg fill='%23fff'%3E%3Cellipse cx='9.5' cy='9' rx='1.5' ry='1'/%3E%3Cellipse cx='14.5' cy='9' rx='1.5' ry='1'/%3E%3C/g%3E%3C/mask%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath stroke-dasharray='30' stroke-dashoffset='30' d='M12 4C13.6683 4 14.6122 4.39991 15 4.5C15.5255 4.07463 16.9375 3 18.5 3C18.8438 4 18.7863 5.21921 18.5 6C19.25 7 19.5 8 19.5 9.5C19.5 11.6875 19.017 13.0822 18 14C16.983 14.9178 15.8887 15.3749 14.5 15.5C15.1506 16.038 15 17.3743 15 18C15 18.7256 15 21 15 21M12 4C10.3317 4 9.38784 4.39991 9 4.5C8.47455 4.07463 7.0625 3 5.5 3C5.15625 4 5.21371 5.21921 5.5 6C4.75 7 4.5 8 4.5 9.5C4.5 11.6875 4.98301 13.0822 6 14C7.01699 14.9178 8.1113 15.3749 9.5 15.5C8.84944 16.038 9 17.3743 9 18C9 18.7256 9 21 9 21'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.6s' values='30;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='10' stroke-dashoffset='10' d='M9 19'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.7s' dur='0.2s' values='10;0'/%3E%3Canimate attributeName='d' dur='3s' repeatCount='indefinite' values='M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5;M9 19c-1.406 0-3-.5-4-.5-.532 0-1 0-2-.5;M9 19c-1.406 0-2.844-.563-3.688-1.188C4.47 17.188 4.22 16.157 3 15.5'/%3E%3C/path%3E%3C/g%3E%3Crect width='8' height='4' x='8' y='11' fill='%23000' mask='url(%23lineMdGithubLoop0)'%3E%3Canimate attributeName='y' dur='10s' keyTimes='0;0.45;0.46;0.54;0.55;1' repeatCount='indefinite' values='11;11;7;7;11;11'/%3E%3C/rect%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #dfb21e;
+}
+
+.line-md--github-loop:hover {
+    color: #fee451;
+}
+
+.line-md--linkedin {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='4' cy='4' r='2' fill='%23000' fill-opacity='0'%3E%3Canimate fill='freeze' attributeName='fill-opacity' dur='0.4s' values='0;1'/%3E%3C/circle%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-width='4'%3E%3Cpath stroke-dasharray='12' stroke-dashoffset='12' d='M4 10V20'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.2s' dur='0.2s' values='12;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='12' stroke-dashoffset='12' d='M10 10V20'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.5s' dur='0.2s' values='12;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='24' stroke-dashoffset='24' d='M10 15C10 12.2386 12.2386 10 15 10C17.7614 10 20 12.2386 20 15V20'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.7s' dur='3s' values='24;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #dfb21e;
+}
+
+.line-md--linkedin:hover {
+    color: #fee451;
+}
+
+.line-md--arrow-left-circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='9' stroke-dasharray='60' stroke-dashoffset='60'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.5s' values='60;0'/%3E%3C/circle%3E%3Cpath stroke-dasharray='12' stroke-dashoffset='12' d='M17 12H7.5'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.6s' dur='0.2s' values='12;0'/%3E%3C/path%3E%3Cpath stroke-dasharray='8' stroke-dashoffset='8' d='M7 12L11 16M7 12L11 8'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' begin='0.8s' dur='2s' values='8;0'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+
+section {
+    animation: entrance 0.5s ease-in-out forwards;
+}
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#leftPanel {
+    animation: entranceLeftPanel 0.5s ease-in-out forwards;
+}
+
+@keyframes entranceLeftPanel {
+    from {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+#smallProfileImage {
+    top: 2vh;
+    right: 2vh;
+    width: 8vh;
+    height: 8vh;
+    position: fixed;
+    object-fit: cover;
+    border-radius: 30vw;
+    border: 2px solid #fee451;
+}
+
+#leftPanel {
+    gap: 20px;
+    width: 7vw;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ion--logo-whatsapp {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M414.73 97.1A222.14 222.14 0 0 0 256.94 32C134 32 33.92 131.58 33.87 254a220.6 220.6 0 0 0 29.78 111L32 480l118.25-30.87a223.6 223.6 0 0 0 106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 0 0 414.73 97.1M256.94 438.66h-.08a185.75 185.75 0 0 1-94.36-25.72l-6.77-4l-70.17 18.32l18.73-68.09l-4.41-7A183.46 183.46 0 0 1 71.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 0 1 185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52m101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78s-14.4 18-17.65 21.75s-6.5 4.16-12.07 1.38s-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26s.93-6.94-.46-9.71s-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52c-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 0 0-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38s39.3 59.73 95.21 83.76a323 323 0 0 0 31.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2c10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37s-5.11-3.71-10.69-6.48'/%3E%3C/svg%3E");
+    background-color: white;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+dialog {
+    background-image: linear-gradient(to bottom right, #000000, #181818, #181818, #181818, #000000);
+    border-radius: 1.6vh;
+    border: 2px solid #ffce2e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    padding: 2vh;
+    width: 75vh;
+    height: fit-content;
+    z-index: 2;
+
+    h2,
+    p,
+    label {
+        font-family: "Raleway", sans-serif;
+        color: white;
+    }
+
+    animation: entrance 0.5s ease-in-out forwards;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        height: fit-content;
+        align-items: start;
+        justify-content: center;
+
+        input,
+        textarea {
+            background-color: #272727;
+            border-radius: 1.2vh;
+            border: 0px;
+            color: white;
+            padding: 1.6vh;
+            width: 95%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+dialog::backdrop {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    animation: entranceBackdropDialog 0.5s ease-in-out forwards;
+}
+
+@keyframes entranceBackdropDialog {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.copyButton {
+    background-color: #1b1b1b;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    font-size: 1.2vw;
+    padding: 0px 15px;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyButton:hover {
+    background-color: #dfb21e;
+    color: black;
+}
+
+.copyButton:active {
+    box-shadow: 0 0 10px #fee45186;
+    color: white;
+}
+
+.cardFooter {
+    width: 100%;
+    display: flex;
+    height: 4vh;
+    align-items: center;
+    flex-direction: row;
+    background-color: #141414;
+    justify-content: space-between;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./tech-map.css">
+    <script src="/app.js" type="text/javascript" defer></script>
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <script src="./tech-map.js" type="text/javascript" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de tecnologias</title>
+</head>
+
+<body>
+    <main id="techMap">
+        <div id="leftPanel">
+            <button onclick="goTo('/pages/personal-data/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-user"></i>
+            </button>
+            <button onclick="goTo('/pages/experiences/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-work-alt"></i>
+            </button>
+            <button onclick="goTo('/pages/academic-life/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-pen"></i>
+            </button>
+            <button onclick="goTo('/pages/projects/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-album"></i>
+            </button>
+            <button onclick="goTo('/pages/tech-skills/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-card-diamonds"></i>
+            </button>
+            <button onclick="goTo('/pages/extra-skills/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-card-hearts"></i>
+            </button>
+            <button onclick="goTo('/pages/tech-map/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-display-grid"></i>
+            </button>
+            <button onclick="goTo('/pages/hobbies/index.html')"
+                style="width: 110px; height: 60px; margin-left: -50px; justify-content: end;">
+                <i class="gg-games"></i>
+            </button>
+        </div>
+        <img id="smallProfileImage" src="" />
+        <div id="content">
+            <button id="backButton" onclick="showHome()" style="width: fit-content;">
+                <span class="line-md--arrow-left-circle"></span>
+                <p>Voltar</p>
+            </button>
+            <section>
+                <div id="header">
+                    <h2>Mapa de tecnologias</h2>
+                </div>
+
+                <div id="container">
+                    <img class="skillIcon" class="skillIcon" src="/assets/curriculum/skill-icons/aws-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/azure-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/blender-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/cdk.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/certificate-manager.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/cloudfront.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/cloudwatch.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/construct3-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/csharp-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/css-3-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/docker-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/document-db.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/dynamodb.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/ec2.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/elastic-load-balancing.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/fargate.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/flutter-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/git-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/gocd-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/html-5-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/iam.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/java-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/javascript-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/lambda.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/mongo-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/mqtt-hor.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/mysql-logo-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/nestjs-icon.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/node-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/postgresql-icon.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/powerpoint-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/python-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/rabbitmq-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/rds.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/react-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/s3.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/scilab-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/soap.png" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/sqs.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/typescript-logo-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/unity.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/r.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/matlab-svgrepo-com.svg" width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/delphi01-svgrepo-com.svg"
+                        width="100px" />
+                    <img class="skillIcon" src="/assets/curriculum/skill-icons/linux-svgrepo-com.svg" width="100px" />
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
