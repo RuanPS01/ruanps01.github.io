@@ -305,6 +305,37 @@ section {
     mask-size: 100% 100%;
 }
 
+input,
+textarea {
+    background-color: #272727;
+    border-radius: 1.2vh;
+    border: 0px;
+    color: white;
+    padding: 1.6vh;
+    width: 95%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: fit-content;
+    align-items: start;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 dialog {
     background-image: linear-gradient(to bottom right, #000000, #181818, #181818, #181818, #000000);
     border-radius: 1.6vh;
@@ -314,45 +345,13 @@ dialog {
     width: 75vh;
     height: fit-content;
     z-index: 2;
-
-    h2,
-    p,
-    label {
-        font-family: "Raleway", sans-serif;
-        color: white;
-    }
-
+    color: white;
+    font-family: "Raleway", sans-serif;
     animation: entrance 0.5s ease-in-out forwards;
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        height: fit-content;
-        align-items: start;
-        justify-content: center;
 
-        input,
-        textarea {
-            background-color: #272727;
-            border-radius: 1.2vh;
-            border: 0px;
-            color: white;
-            padding: 1.6vh;
-            width: 95%;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        }
-    }
 
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-    }
+
 }
 
 
