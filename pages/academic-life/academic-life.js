@@ -44,4 +44,19 @@ window.onload = async function loadData() {
     } catch (erro) {
         console.error('Erro ao carregar o JSON:', erro);
     }
+
+    showLeftManelIfDesktop();
+}
+
+function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+
+function showLeftManelIfDesktop() {
+    const leftPanel = document.getElementById("leftPanel");
+    if (isMobile()) {
+        leftPanel.style.display = "none";
+    } else {
+        leftPanel.style.display = "block";
+    }
 }

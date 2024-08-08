@@ -49,9 +49,25 @@ header {
     justify-content: center;
 }
 
+#leftDivisionHeaderMobile {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #rightDivisionHeader {
     width: 80px;
     height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rightDivisionHeaderMobile {
+    width: 80px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,24 +118,24 @@ a {
 
 button {
     gap: 10px;
-    width: 20vw;
+    width: 30vh;
     height: 5vh;
     display: flex;
     color: black;
     cursor: pointer;
-    margin-top: 20px;
     font-size: 2.6vh;
+    margin-top: 20px;
+    font-weight: 600;
     padding: 0px 20px;
     border-radius: 10vh;
     align-items: center;
     border: 0px solid white;
     background-color: #ffce2e;
-    background-image: linear-gradient(to right, #fee451, #dfb21e);
     justify-content: space-between;
     font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation: entranceButton 0.5s ease-in-out forwards;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: linear-gradient(to right, #fee451, #dfb21e);
 }
 
 @keyframes entranceButton {
@@ -152,10 +168,18 @@ button:active {
     justify-content: center;
 }
 
+
 .centerPanel {
     gap: 60px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerPanelMobile {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -252,6 +276,8 @@ section {
     object-fit: cover;
     border-radius: 30vw;
     border: 2px solid #fee451;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #leftPanel {
@@ -328,6 +354,7 @@ dialog {
         gap: 10px;
     }
 }
+
 
 dialog::backdrop {
     color: white;

@@ -5,7 +5,14 @@
     <title>Ruan Patrick</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="app.js" type="text/javascript" defer></script>
+
+    <!-- css.gg -->
     <link href="https://css.gg/css" rel="stylesheet" />
+    <!-- UNPKG -->
+    <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+    <!-- JSDelivr -->
+    <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet" />
+
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,89 +25,174 @@
 </head>
 
 <body>
-    <div class="backgroundDiv"></div>
-    <main id="home">
-        <header>
-            <div id="leftDivisionHeader">
-                <a id="github" class="line-md--github-loop" href="" target="blank"></a>
-            </div>
-            <h1>{{name}}</h1>
-            <div id="rightDivisionHeader">
-                <a id="linkedin" class="line-md--linkedin" href="" target="blank"></a>
-            </div>
-        </header>
-        <div class=" centerPanel">
-            <div class="panelColumn">
-                <button onclick="goTo('/pages/personal-data/index.html')" style="margin-right: -70px;">
-                    <i class="gg-user"></i>
-                    <p>Dados Pessoais</p>
-                </button>
-                <button onclick="goTo('/pages/experiences/index.html')">
-                    <i class="gg-work-alt"></i>
-                    <p>Experiência</p>
-                </button>
-                <button onclick="goTo('/pages/academic-life/index.html')">
-                    <i class="gg-pen"></i>
-                    <p>Vida acadêmica</p>
-                </button>
-                <button onclick="goTo('/pages/projects/index.html')" style="margin-right: -80px;">
-                    <i class="gg-album"></i>
-                    <p>Projetos</p>
-                </button>
-            </div>
-            <img id="profileImage" src="" />
-            <div class="panelColumn">
-                <button onclick="goTo('/pages/tech-skills/index.html')" style="margin-left: -70px;">
-                    <p>Habilidades técnicas</p>
-                    <i class="gg-card-diamonds"></i>
-                </button>
-                <button onclick="goTo('/pages/extra-skills/index.html')">
-                    <p>Habilidades extras</p>
-                    <i class="gg-card-hearts"></i>
-                </button>
-                <button onclick="goTo('/pages/tech-map/index.html')">
-                    <p>Mapa de tecnologias</p>
-                    <i class="gg-display-grid"></i>
-                </button>
-                <button onclick="goTo('/pages/hobbies/index.html')" style="margin-left: -80px;">
-                    <p>Passa-tempos</p>
-                    <i class="gg-games"></i>
-                </button>
-
-            </div>
-        </div>
-        <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
-        <button onclick="sendMessageDialog.showModal()">
-            <p>Enviar uma mensagem</p>
-            <i class="gg-mail"></i>
-        </button>
-        <p>-</p>
-    </main>
-    <dialog id="sendMessageDialog">
-        <main id="dialogContent">
-            <span class="ion--logo-whatsapp"></span>
-            <h2>Vamos conversar?</h2>
-            <p>Você será redirecionado para o Whatsapp. Escreva sua mensagem e clique em enviar. Respondo assím que
-                possível. Fique a vontade!</p>
-            <form onsubmit="sendMessage(); event.preventDefault();">
-                <label for="name">Seu nome:</label>
-                <input type="text" id="name" name="name">
-                <label for="message">Sua mensagem:</label>
-                <textarea id="message" name="message"></textarea>
-                <footer>
-                    <button onclick="sendMessageDialog.close(); event.stopPropagation(); return false;">
-                        Fechar
-                        <i class="gg-close-o"></i>
+    <div id="desktop" style="display: none;">
+        <div class="backgroundDiv"></div>
+        <main id="home">
+            <header>
+                <div id="leftDivisionHeader">
+                    <a id="github" class="line-md--github-loop github" href="" target="blank"></a>
+                </div>
+                <h1>{{name}}</h1>
+                <div id="rightDivisionHeader">
+                    <a id="linkedin" class="line-md--linkedin linkedin" href="" target="blank"></a>
+                </div>
+            </header>
+            <div class="centerPanel">
+                <div class="panelColumn">
+                    <button onclick="goTo('/pages/personal-data/index.html')" style="margin-right: -70px;">
+                        <i class="gg-user"></i>
+                        <p>Dados Pessoais</p>
                     </button>
-                    <button type="submit">
-                        Enviar
-                        <i class="gg-mail"></i>
+                    <button onclick="goTo('/pages/experiences/index.html')">
+                        <i class="gg-work-alt"></i>
+                        <p>Experiência</p>
                     </button>
-                </footer>
-            </form>
+                    <button onclick="goTo('/pages/academic-life/index.html')">
+                        <i class="gg-pen"></i>
+                        <p>Vida acadêmica</p>
+                    </button>
+                    <button onclick="goTo('/pages/projects/index.html')" style="margin-right: -80px;">
+                        <i class="gg-album"></i>
+                        <p>Projetos</p>
+                    </button>
+                </div>
+                <img id="profileImage" class="profileImage" src="" />
+                <div class="panelColumn">
+                    <button onclick="goTo('/pages/tech-skills/index.html')" style="margin-left: -70px;">
+                        <p>Habilidades técnicas</p>
+                        <i class="gg-card-diamonds"></i>
+                    </button>
+                    <button onclick="goTo('/pages/extra-skills/index.html')">
+                        <p>Habilidades extras</p>
+                        <i class="gg-card-hearts"></i>
+                    </button>
+                    <button onclick="goTo('/pages/tech-map/index.html')">
+                        <p>Mapa de tecnologias</p>
+                        <i class="gg-display-grid"></i>
+                    </button>
+                    <button onclick="goTo('/pages/hobbies/index.html')" style="margin-left: -80px;">
+                        <p>Passa-tempos</p>
+                        <i class="gg-games"></i>
+                    </button>
 
+                </div>
+            </div>
+            <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
+            <button onclick="sendMessageDialog.showModal()">
+                <p>Enviar uma mensagem</p>
+                <i class="gg-mail"></i>
+            </button>
+            <p>-</p>
         </main>
-    </dialog>
+        <dialog id="sendMessageDialog">
+            <main id="dialogContent">
+                <span class="ion--logo-whatsapp"></span>
+                <h2>Vamos conversar?</h2>
+                <p>Você será redirecionado para o Whatsapp. Escreva sua mensagem e clique em enviar. Respondo assím que
+                    possível. Fique a vontade!</p>
+                <form onsubmit="sendMessage(); event.preventDefault();">
+                    <label for="name">Seu nome:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="message">Sua mensagem:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <footer>
+                        <button onclick="sendMessageDialog.close(); event.stopPropagation(); return false;">
+                            Fechar
+                            <i class="gg-close-o"></i>
+                        </button>
+                        <button type="submit">
+                            Enviar
+                            <i class="gg-mail"></i>
+                        </button>
+                    </footer>
+                </form>
+
+            </main>
+        </dialog>
+    </div>
+    <div id="mobile" style="display: none;">
+        <div class="backgroundDiv"></div>
+        <main id="home">
+            <header>
+                <div id="leftDivisionHeaderMobile">
+                    <a id="github" class="line-md--github-loop github" href="" target="blank"></a>
+                </div>
+                <h2>{{name}}</h2>
+                <div id="rightDivisionHeaderMobile">
+                    <a id="linkedin" class="line-md--linkedin linkedin" href="" target="blank"></a>
+                </div>
+            </header>
+            <div class="panelColumn">
+                <img id="profileImage" class="profileImage" src="" />
+                <div class="panelGridColumnMobile">
+                    <button onclick="goTo('/pages/personal-data/index.html')">
+                        <i class="gg-user"></i>
+                        <p>Dados Pessoais</p>
+                    </button>
+                    <button onclick="goTo('/pages/experiences/index.html')">
+                        <i class="gg-work-alt"></i>
+                        <p>Experiência</p>
+                    </button>
+                    <button onclick="goTo('/pages/academic-life/index.html')">
+                        <i class="gg-pen"></i>
+                        <p>Vida acadêmica</p>
+                    </button>
+                    <button onclick="goTo('/pages/projects/index.html')">
+                        <i class="gg-album"></i>
+                        <p>Projetos</p>
+                    </button>
+                    <button onclick="goTo('/pages/tech-skills/index.html')">
+                        <p>Habilidades técnicas</p>
+                        <i class="gg-card-diamonds"></i>
+                    </button>
+                    <button onclick="goTo('/pages/extra-skills/index.html')">
+                        <p>Habilidades extras</p>
+                        <i class="gg-card-hearts"></i>
+                    </button>
+                    <button onclick="goTo('/pages/tech-map/index.html')">
+                        <p>Mapa de tecnologias</p>
+                        <i class="gg-display-grid"></i>
+                    </button>
+                    <button onclick="goTo('/pages/hobbies/index.html')">
+                        <p>Passa-tempos</p>
+                        <i class="gg-games"></i>
+                    </button>
+                </div>
+            </div>
+            <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
+            <button onclick="sendMessageDialogMobile.showModal()">
+                <p>Enviar uma mensagem</p>
+                <i class="gg-mail"></i>
+            </button>
+            <p>-</p>
+        </main>
+        <dialog id="sendMessageDialogMobile">
+            <main id="dialogContent">
+                <span class="ion--logo-whatsapp"></span>
+                <h2>Vamos conversar?</h2>
+                <p>Você será redirecionado para o Whatsapp. Escreva sua mensagem e clique em enviar. Respondo assím que
+                    possível. Fique a vontade!</p>
+                <form onsubmit="sendMessageMobile(); event.preventDefault();">
+                    <label for="nameMobile">Seu nome:</label>
+                    <input type="text" id="nameMobile" name="nameMobile">
+                    <label for="messageMobile">Sua mensagem:</label>
+                    <textarea id="messageMobile" name="messageMobile"></textarea>
+                    <footer>
+                        <button onclick="sendMessageDialogMobile.close(); event.stopPropagation(); return false;">
+                            Fechar
+                            <i class="gg-close-o"></i>
+                        </button>
+                        <button type="submit">
+                            Enviar
+                            <i class="gg-mail"></i>
+                        </button>
+                    </footer>
+                </form>
+
+            </main>
+        </dialog>
+    </div>
+
 </body>
 
 </html>
