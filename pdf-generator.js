@@ -2,6 +2,103 @@
 // Verificar se o script está sendo carregado corretamente
 console.log('PDF Generator script carregado!');
 
+// Função para converter SVG para imagem PNG
+async function convertSvgToImage(svgUrl) {
+    return new Promise((resolve, reject) => {
+        // Criar um elemento de imagem para carregar o SVG
+        const img = new Image();
+        img.onload = () => {
+            try {
+                // Criar um canvas para renderizar o SVG
+                const canvas = document.createElement('canvas');
+                const size = 24; // Tamanho padrão para ícones
+                canvas.width = size;
+                canvas.height = size;
+                
+                // Obter contexto e desenhar a imagem
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, size, size);
+                
+                // Fundo transparente
+                ctx.fillStyle = 'rgba(0,0,0,0)';
+                ctx.fillRect(0, 0, size, size);
+                
+                // Desenhar o SVG
+                ctx.drawImage(img, 0, 0, size, size);
+                
+                // Converter para uma imagem PNG
+                const pngImage = new Image();
+                pngImage.onload = () => resolve(pngImage);
+                pngImage.onerror = (e) => reject(new Error('Erro ao criar imagem PNG do SVG'));
+                pngImage.src = canvas.toDataURL('image/png');
+            } catch (error) {
+                reject(error);
+            }
+        };
+        img.onerror = () => reject(new Error(`Falha ao carregar SVG: ${svgUrl}`));
+        
+        // SVGs podem precisar de tratamento especial para CORS
+        img.crossOrigin = 'Anonymous';
+        img.src = svgUrl;
+    });
+}
+
+// Função para pré-carregar ícones de tecnologia, com suporte para SVG
+async function preloadTechIcons(data) {
+    const techIconsCache = {};
+    
+    // Coletar todos os caminhos de ícones de todas as fontes
+    const iconPaths = new Set();
+    
+    // Experiências
+    data.experience.forEach(exp => {
+        if (exp.icons && Array.isArray(exp.icons)) {
+            exp.icons.forEach(icon => iconPaths.add(icon));
+        }
+    });
+    
+    // Educação
+    data.education.forEach(edu => {
+        if (edu.icons && Array.isArray(edu.icons)) {
+            edu.icons.forEach(icon => iconPaths.add(icon));
+        }
+    });
+    
+    // Projetos
+    data.projects.forEach(proj => {
+        if (proj.icons && Array.isArray(proj.icons)) {
+            proj.icons.forEach(icon => iconPaths.add(icon));
+        }
+    });
+    
+    console.log(`Total de ${iconPaths.size} ícones para carregar`);
+    
+    // Carregar ícones em paralelo
+    const loadPromises = Array.from(iconPaths).map(async path => {
+        try {
+            // Verificar se é um SVG
+            if (path.toLowerCase().endsWith('.svg')) {
+                // Converter SVG para imagem
+                const icon = await convertSvgToImage(path);
+                techIconsCache[path] = icon;
+                console.log(`Ícone SVG convertido: ${path}`);
+            } else {
+                // Para outros formatos, carregar normalmente
+                const icon = await loadImage(path);
+                techIconsCache[path] = icon;
+                console.log(`Ícone carregado: ${path}`);
+            }
+        } catch (e) {
+            console.warn(`Falha ao carregar ícone: ${path}`, e);
+        }
+    });
+    
+    await Promise.all(loadPromises);
+    console.log(`Pré-carregados ${Object.keys(techIconsCache).length} ícones de tecnologias`);
+    
+    return techIconsCache;
+}
+
 // Declarar a função no escopo global
 window.generateResumePDF = async function() {
     // Verifica se está em um dispositivo móvel
@@ -40,7 +137,11 @@ window.generateResumePDF = async function() {
         const response = await fetch('/data.json');
         const data = await response.json();
         
-        // Carregar as imagens de ícones - Usar caminho absoluto e garantir que os arquivos existam
+        console.log('Carregando e convertendo SVGs...');
+        // Pré-carregar ícones de tecnologias, incluindo conversão de SVG
+        const techIconsCache = await preloadTechIcons(data);
+        
+        // Carregar as imagens de ícones para a linha do tempo
         let expIcon, eduIcon, prjIcon;
         try {
             expIcon = await loadImage('/assets/curriculum/images/pdf/EXP.png');
@@ -52,8 +153,7 @@ window.generateResumePDF = async function() {
             prjIcon = await loadImage('/assets/curriculum/images/pdf/PRJ.png');
             console.log('Ícone PRJ carregado com sucesso');
         } catch (e) {
-            console.warn('Não foi possível carregar os ícones PNG:', e);
-            // Caso não seja possível carregar, criaremos os ícones manualmente
+            console.warn('Não foi possível carregar os ícones PNG, criando substitutos:', e);
             expIcon = await createIconImage('EXP', '#2563eb');
             eduIcon = await createIconImage('EDU', '#2563eb');
             prjIcon = await createIconImage('PRJ', '#2563eb');
@@ -66,6 +166,13 @@ window.generateResumePDF = async function() {
             console.log('Imagem de perfil carregada com sucesso:', data.profileImage.replace("images", "images-crop"));
         } catch (e) {
             console.warn('Não foi possível carregar a imagem de perfil:', e);
+            try {
+                // Tentar carregar a imagem original se a versão crop não existir
+                profileImage = await loadImage(data.profileImage);
+                console.log('Imagem de perfil original carregada com sucesso');
+            } catch (e2) {
+                console.warn('Não foi possível carregar nenhuma versão da imagem de perfil:', e2);
+            }
         }
         
         // Inicializar o PDF - A4 no modo retrato
@@ -100,7 +207,7 @@ window.generateResumePDF = async function() {
         let yPos = 60;
         
         // Adicionar linha do tempo (experiências, educação, projetos)
-        yPos = addTimeline(pdf, data, yPos, colors, expIcon, eduIcon, prjIcon);
+        yPos = addTimeline(pdf, data, yPos, colors, expIcon, eduIcon, prjIcon, techIconsCache);
         
         // Adicionar habilidades técnicas
         yPos = addTechnicalSkills(pdf, data, yPos, colors);
@@ -292,7 +399,7 @@ function addHeader(pdf, data, colors, profileImage) {
     }
 }
 
-function addTimeline(pdf, data, startY, colors, expIcon, eduIcon, prjIcon) {
+function addTimeline(pdf, data, startY, colors, expIcon, eduIcon, prjIcon, techIconsCache) {
     let yPos = startY + 10;
     
     // Título da seção
@@ -335,7 +442,6 @@ function addTimeline(pdf, data, startY, colors, expIcon, eduIcon, prjIcon) {
     // Desenhar a linha temporal
     pdf.setDrawColor(colors.primary);
     pdf.setLineWidth(0.5);
-    pdf.line(25, yPos, 25, yPos + timeline.length * 30); // Linha vertical da timeline
     
     // Adicionar cada item à linha do tempo
     timeline.forEach((item, index) => {
@@ -347,20 +453,20 @@ function addTimeline(pdf, data, startY, colors, expIcon, eduIcon, prjIcon) {
             
             // Resetar posição Y 
             yPos = 20;
-            
-            // Redesenhar a linha temporal para a próxima seção
-            pdf.setDrawColor(colors.primary);
-            pdf.line(25, yPos, 25, yPos + 250);
         }
         
         // Desenhar marcador na linha temporal
         pdf.setFillColor(colors.primary);
         pdf.circle(25, yPos + 5, 2, 'F');
+
+        // Redesenhar a linha temporal para a próxima seção
+        pdf.setDrawColor(colors.primary);
+        if(index > 0) pdf.line(25, yPos - 36, 25, yPos + 4);
         
         // Configurar título do item
         pdf.setFontSize(12);
         pdf.setTextColor(colors.primary);
-        const title = item.title + (item.company ? ` - ${item.company}` : '');
+        const title = item.title+ (item.company ? ` - ${item.company}` : '');
         pdf.text(title, 35, yPos + 5);
         
         // Configurar período
@@ -377,13 +483,56 @@ function addTimeline(pdf, data, startY, colors, expIcon, eduIcon, prjIcon) {
         const wrappedText = pdf.splitTextToSize(description, 150);
         pdf.text(wrappedText, 35, yPos + 12);
         
-        // Palavras-chave
+        // Palavras-chave e ícones
         if (item.keywords && item.keywords.length > 0) {
+            const baseY = yPos + 12 + wrappedText.length * 4;
+            
+            // Texto das palavras-chave
             pdf.setFontSize(8);
             pdf.setTextColor('#aaaaaa');
             const keywords = item.keywords.join(', ');
             const wrappedKeywords = pdf.splitTextToSize(`Tecnologias: ${keywords}`, 150);
-            pdf.text(wrappedKeywords, 35, yPos + 12 + wrappedText.length * 4);
+            pdf.text(wrappedKeywords, 35, baseY);
+            
+            // Adicionar ícones das tecnologias
+            if (item.icons && item.icons.length > 0 && techIconsCache) {
+                const iconsPerRow = 20;
+                const iconSize = 5;
+                const iconSpacing = 2;
+                const startX = 35;
+                const startY = baseY + wrappedKeywords.length * 4;
+                
+                // Limitar o número de ícones para evitar sobreposição
+                const maxIcons = 16;
+                
+                // Adicionar ícones em linhas
+                for (let i = 0; i < Math.min(item.icons.length, maxIcons); i++) {
+                    try {
+                        const iconPath = item.icons[i];
+                        const row = Math.floor(i / iconsPerRow);
+                        const col = i % iconsPerRow;
+                        const iconX = startX + col * (iconSize + iconSpacing);
+                        const iconY = startY + row * (iconSize + iconSpacing);
+                        
+                        // Verificar se o ícone foi pré-carregado e está no cache
+                        if (techIconsCache[iconPath]) {
+                            pdf.addImage(
+                                techIconsCache[iconPath], 
+                                'PNG', 
+                                iconX, 
+                                iconY, 
+                                iconSize, 
+                                iconSize
+                            );
+                            console.log(`Ícone adicionado ao PDF: ${iconPath}`);
+                        } else {
+                            console.warn(`Ícone não encontrado no cache: ${iconPath}`);
+                        }
+                    } catch (error) {
+                        console.warn(`Erro ao adicionar ícone de tecnologia: ${item.icons[i]}`, error);
+                    }
+                }
+            }
         }
         
         // Adicionar ícone de tipo
@@ -426,7 +575,7 @@ function addTimeline(pdf, data, startY, colors, expIcon, eduIcon, prjIcon) {
         }
         
         // Adicionar espaço entre itens
-        yPos += 30;
+        yPos += 36;
     });
     
     return yPos + 10;
