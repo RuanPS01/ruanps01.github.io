@@ -8,7 +8,7 @@
     position: absolute;
     align-items: start;
     justify-content: start;
-    background-image: linear-gradient(to bottom, #ffd50015, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
+    background-image: linear-gradient(to bottom, #2563eb15, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
 }
 
 #content {
@@ -46,5 +46,5 @@
     flex-direction: column;
     background-color: #272727;
     justify-content: space-between;
-    color: #ffce2e
+    color: #2563eb
 }

@@ -8,7 +8,7 @@
     position: absolute;
     align-items: start;
     justify-content: start;
-    background-image: linear-gradient(to bottom, #ffd50015, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
+    background-image: linear-gradient(to bottom, #2563eb15, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000);
 }
 
 #content {
@@ -74,12 +74,12 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ffd500;
+    background-color: #2563eb;
 }
 
 .skillCardEmptyDot {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background-color: #ffd50015;
+    background-color: #2563eb15;
 }

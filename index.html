@@ -5,6 +5,7 @@
     <title>Ruan Patrick</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="app.js" type="text/javascript" defer></script>
+    <script src="pdf-generator.js" defer></script>
 
     <!-- css.gg -->
     <link href="https://css.gg/css" rel="stylesheet" />
@@ -82,7 +83,10 @@
                 <p>Enviar uma mensagem</p>
                 <i class="gg-mail"></i>
             </button>
-            <p>-</p>
+            <button onclick="generateResumePDF()" style="margin-bottom: 10vh;">
+                <p>Baixar Currículo em PDF</p>
+                <i class="gg-file"></i>
+            </button>
         </main>
         <dialog id="sendMessageDialog">
             <main id="dialogContent">
@@ -164,7 +168,11 @@
                 <p>Enviar uma mensagem</p>
                 <i class="gg-mail"></i>
             </button>
-            <p>-</p>
+            <p>ou</p>
+            <button onclick="generateResumePDF()">
+                <p>Baixar Currículo em PDF</p>
+                <i class="gg-file-document"></i>
+            </button>
         </main>
         <dialog id="sendMessageDialogMobile">
             <main id="dialogContent">
