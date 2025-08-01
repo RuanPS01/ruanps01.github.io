@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(to right, #2563eb0c, #2563eb41);
+    background-image: linear-gradient(to right, #8383830c, #77777741);
     width: 100%;
     height: fit-content;
     display: flex;
@@ -78,20 +78,22 @@ header {
     height: 30vw;
     object-fit: cover;
     border-radius: 30vw;
-    border: 4px solid white;
-    box-shadow: 0 0 10px #2563eb86;
+    /* border: 4px solid white; */
+    box-shadow: 0 0 10px #ebebeb86;
     transition: box-shadow 0.5s ease-in-out;
-    box-shadow: 0 0 0px #2563eb86;
+    box-shadow: 0 0 0px #e7e7e786;
     animation: growAndShrink 1s ease-in-out infinite alternate;
 }
 
 @keyframes growAndShrink {
     from {
-        box-shadow: 0 0 0px #2563eb86;
+        box-shadow: 0 0 0px #00000086;
+        transform: scale(1);
     }
 
     to {
-        box-shadow: 0 0 20px #2563eb86;
+        box-shadow: 0 0 20px #00000086;
+        transform: scale(1.008);
     }
 }
 
@@ -121,7 +123,7 @@ button {
     width: 30vh;
     height: 5vh;
     display: flex;
-    color: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 2.6vh;
     margin-top: 20px;
@@ -130,12 +132,12 @@ button {
     border-radius: 10vh;
     align-items: center;
     border: 0px solid white;
-    background-color: #2563eb;
+    background-color: #8d8d8d;
     justify-content: space-between;
     font-family: "Raleway", sans-serif;
     animation: entranceButton 0.5s ease-in-out forwards;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-image: linear-gradient(to right, #4a84ff, #2563eb);
+    background-image: linear-gradient(to right, #3a3a3a, #1d1d1d);
 }
 
 @keyframes entranceButton {
@@ -151,13 +153,13 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 0 10px #2563eb86;
+    box-shadow: 0 0 10px #e6e6e686;
     transform: scale(1.05);
 }
 
 button:active {
     box-shadow: 0 0 10px #2563eb86;
-    transform: scale(0.9);
+    /* transform: scale(0.9); */
 }
 
 .panelColumn {
@@ -275,8 +277,8 @@ section {
     position: fixed;
     object-fit: cover;
     border-radius: 30vw;
-    border: 2px solid #4a84ff;
-    border: 2px solid #4a84ff;
+    border: 2px solid #e2e2e256;
+    border: 2px solid #d4d4d449;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
@@ -340,7 +342,7 @@ footer {
 dialog {
     background-image: linear-gradient(to bottom right, #000000, #181818, #181818, #181818, #000000);
     border-radius: 1.6vh;
-    border: 2px solid #2563eb;
+    /* border: 2px solid #2563eb; */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     padding: 2vh;
     width: 75vh;
@@ -387,7 +389,7 @@ dialog::backdrop {
 }
 
 .copyButton:hover {
-    background-color: #2563eb;
+    background-color: #ffffff;
     color: black;
 }
 
@@ -410,7 +412,7 @@ dialog::backdrop {
     box-sizing: border-box;
     position: relative;
     display: block;
-    transform: scale(var(--ggs,1));
+    transform: scale(var(--ggs, 1));
     width: 14px;
     height: 16px;
     border: 2px solid transparent;
@@ -458,5 +460,7 @@ dialog::backdrop {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
