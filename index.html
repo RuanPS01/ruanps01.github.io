@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <title>Ruan Patrick</title>
@@ -7,13 +7,7 @@
     <script src="app.js" type="text/javascript" defer></script>
     <script src="pdf-generator.js" defer></script>
 
-    <!-- css.gg -->
-    <link href="https://css.gg/css" rel="stylesheet" />
-    <!-- UNPKG -->
-    <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
-    <!-- JSDelivr -->
-    <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,54 +35,54 @@
             <div class="centerPanel">
                 <div class="panelColumn">
                     <button onclick="goTo('/pages/personal-data/index.html')" style="margin-right: -70px;">
-                        <i class="gg-user"></i>
-                        <p>Dados Pessoais</p>
+                        <i class="bi bi-person"></i>
+                        <p>Personal Data</p>
                     </button>
                     <button onclick="goTo('/pages/experiences/index.html')">
-                        <i class="gg-work-alt"></i>
-                        <p>Experiência</p>
+                        <i class="bi bi-briefcase"></i>
+                        <p>Experience</p>
                     </button>
                     <button onclick="goTo('/pages/academic-life/index.html')">
-                        <i class="gg-pen"></i>
-                        <p>Vida acadêmica</p>
+                        <i class="bi bi-mortarboard"></i>
+                        <p>Academic Life</p>
                     </button>
                     <button onclick="goTo('/pages/projects/index.html')" style="margin-right: -80px;">
-                        <i class="gg-album"></i>
-                        <p>Projetos</p>
+                        <i class="bi bi-code"></i>
+                        <p>Projects</p>
                     </button>
                 </div>
                 <img id="profileImage" class="profileImage" src="" />
                 <div class="panelColumn">
                     <button onclick="goTo('/pages/tech-skills/index.html')" style="margin-left: -70px;">
-                        <p>Habilidades técnicas</p>
-                        <i class="gg-card-diamonds"></i>
+                        <p>Technical Skills</p>
+                        <i class="bi bi-keyboard"></i>
                     </button>
                     <button onclick="goTo('/pages/extra-skills/index.html')">
-                        <p>Habilidades extras</p>
-                        <i class="gg-card-hearts"></i>
+                        <p>Extra Skills</p>
+                        <i class="bi bi-person-lines-fill"></i>
                     </button>
                     <button onclick="goTo('/pages/tech-map/index.html')">
-                        <p>Mapa de tecnologias</p>
-                        <i class="gg-display-grid"></i>
+                        <p>Technology Map</p>
+                        <i class="bi bi-grid-3x2-gap"></i>
                     </button>
                     <button onclick="goTo('/pages/hobbies/index.html')" style="margin-left: -80px;">
-                        <p>Passa-tempos</p>
-                        <i class="gg-games"></i>
+                        <p>Hobbies</p>
+                        <i class="bi bi-joystick"></i>
                     </button>
 
                 </div>
             </div>
-            <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
+            <!-- <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
             <button onclick="sendMessageDialog.showModal()">
                 <p>Enviar uma mensagem</p>
-                <i class="gg-mail"></i>
+                <i class="bi bi-envelope"></i>
             </button>
             <button onclick="generateResumePDF()" style="margin-bottom: 10vh;">
                 <p>Baixar Currículo em PDF</p>
-                <i class="gg-file"></i>
-            </button>
+                <i class="bi bi-file-earmark-arrow-down"></i>
+            </button> -->
         </main>
-        <dialog id="sendMessageDialog">
+        <!-- <dialog id="sendMessageDialog">
             <main id="dialogContent">
                 <span class="ion--logo-whatsapp"></span>
                 <h2>Vamos conversar?</h2>
@@ -106,13 +100,13 @@
                         </button>
                         <button type="submit">
                             Enviar
-                            <i class="gg-mail"></i>
+                            <i class="bi bi-envelope"></i>
                         </button>
                     </footer>
                 </form>
 
             </main>
-        </dialog>
+        </dialog> -->
     </div>
     <div id="mobile" style="display: none;">
         <div class="backgroundDiv"></div>
@@ -130,50 +124,50 @@
                 <img id="profileImage" class="profileImage" src="" />
                 <div class="panelGridColumnMobile">
                     <button onclick="goTo('/pages/personal-data/index.html')">
-                        <i class="gg-user"></i>
-                        <p>Dados Pessoais</p>
+                        <i class="bi bi-person"></i>
+                        <p>Personal Data</p>
                     </button>
                     <button onclick="goTo('/pages/experiences/index.html')">
-                        <i class="gg-work-alt"></i>
-                        <p>Experiência</p>
+                        <i class="bi bi-briefcase"></i>
+                        <p>Experience</p>
                     </button>
                     <button onclick="goTo('/pages/academic-life/index.html')">
-                        <i class="gg-pen"></i>
-                        <p>Vida acadêmica</p>
+                        <i class="bi bi-mortarboard"></i>
+                        <p>Academic Life</p>
                     </button>
                     <button onclick="goTo('/pages/projects/index.html')">
-                        <i class="gg-album"></i>
-                        <p>Projetos</p>
+                        <i class="bi bi-code"></i>
+                        <p>Projects</p>
                     </button>
                     <button onclick="goTo('/pages/tech-skills/index.html')">
-                        <p>Habilidades técnicas</p>
-                        <i class="gg-card-diamonds"></i>
+                        <p>Technical Skills</p>
+                        <i class="bi bi-keyboard"></i>
                     </button>
                     <button onclick="goTo('/pages/extra-skills/index.html')">
-                        <p>Habilidades extras</p>
-                        <i class="gg-card-hearts"></i>
+                        <p>Extra Skills</p>
+                        <i class="bi bi-person-lines-fill"></i>
                     </button>
                     <button onclick="goTo('/pages/tech-map/index.html')">
-                        <p>Mapa de tecnologias</p>
-                        <i class="gg-display-grid"></i>
+                        <p>Technology Map</p>
+                        <i class="bi bi-grid-3x2-gap"></i>
                     </button>
                     <button onclick="goTo('/pages/hobbies/index.html')">
-                        <p>Passa-tempos</p>
-                        <i class="gg-games"></i>
+                        <p>Hobbies</p>
+                        <i class="bi bi-joystick"></i>
                     </button>
                 </div>
             </div>
-            <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
+            <!-- <h2 style="margin-top: 10vh;">Viu tudo aí em cima? Vamos conversar então</h2>
             <button onclick="sendMessageDialogMobile.showModal()">
                 <p>Enviar uma mensagem</p>
-                <i class="gg-mail"></i>
+                <i class="bi bi-envelope"></i>
             </button>
             <button onclick="generateResumePDF()" style="margin-bottom: 10vh;">
                 <p>Baixar Currículo em PDF</p>
                 <i class="gg-file-document"></i>
-            </button>
+            </button> -->
         </main>
-        <dialog id="sendMessageDialogMobile">
+        <!-- <dialog id="sendMessageDialogMobile">
             <main id="dialogContent">
                 <span class="ion--logo-whatsapp"></span>
                 <h2>Vamos conversar?</h2>
@@ -191,13 +185,13 @@
                         </button>
                         <button type="submit">
                             Enviar
-                            <i class="gg-mail"></i>
+                            <i class="bi bi-envelope"></i>
                         </button>
                     </footer>
                 </form>
 
             </main>
-        </dialog>
+        </dialog> -->
     </div>
 
 </body>

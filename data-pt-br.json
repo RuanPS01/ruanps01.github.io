@@ -6,7 +6,7 @@
   "profileImage": "/assets/curriculum/images/profile.png",
   "personal_data": [
     {
-      "key": "Full Name",
+      "key": "Nome completo",
       "value": "Ruan Patrick de Souza"
     },
     {
@@ -14,21 +14,21 @@
       "value": "ruanpatrick.s@hotmail.com"
     },
     {
-      "key": "Phone",
+      "key": "Telefone",
       "value": "+55 (24) 98114-0105"
     },
     {
-      "key": "Address",
+      "key": "Endereço",
       "value": "Santa Rita do Sapucaí, MG"
     }
   ],
   "experience": [
     {
-      "title": "Technical Lead",
+      "title": "Líder técnico",
       "company": "Inatel Competence Center",
       "start": "03/2024",
-      "end": "Present",
-      "description": "Full-stack development and cooperative leadership in projects and their infrastructures.",
+      "end": "Hoje",
+      "description": "Desenolvimento Full-stack e liderança cooperativa nos projetos e suas infraestruturas.",
       "keywords": [
         "typescript",
         "javaScript",
@@ -53,11 +53,11 @@
       ]
     },
     {
-      "title": "Technical Lead",
+      "title": "Líder técnico",
       "company": "Scoder",
       "start": "02/2023",
       "end": "03/2024",
-      "description": "Full-stack development and cooperative leadership in projects and their infrastructures.",
+      "description": "Desenolvimento Full-stack e liderança cooperativa nos projetos e suas infraestruturas.",
       "keywords": [
         "aws",
         "typescript",
@@ -112,11 +112,11 @@
       ]
     },
     {
-      "title": "Full Stack Developer",
+      "title": "Desenvolvedor Full Stack",
       "company": "TooDoo",
       "start": "06/2021",
       "end": "01/2023",
-      "description": "Backend and frontend developer for projects, responsible for implementing subscription systems, creating receipts and other business rules for a digital bank.",
+      "description": "Desenvolvedor de backend e frontend para os projetos, responsável por implementar por exemplo sistemas de assinatura, criar recibos e outras regras de negócio para um banco digital.",
       "keywords": [
         "typescript",
         "javaScript",
@@ -131,9 +131,7 @@
         "clean code",
         "rabbitmq"
       ],
-      "images": [
-        "/assets/curriculum/images/toodoo.png"
-      ],
+      "images": ["/assets/curriculum/images/toodoo.png"],
       "icons": [
         "/assets/curriculum/skill-icons/typescript-logo-svgrepo-com.svg",
         "/assets/curriculum/skill-icons/javascript-svgrepo-com.svg",
@@ -146,11 +144,11 @@
       ]
     },
     {
-      "title": "Front-End Developer",
+      "title": "Desenvolvedor Front-End",
       "company": "Nouvenn",
       "start": "12/2020",
       "end": "06/2021",
-      "description": "Web application developer in ReactJS for prototypes and mesh network systems.",
+      "description": "Desenvolvedor de aplicações web em ReactJS para protótipos e sistemas de rede mesh.",
       "keywords": [
         "typescript",
         "javaScript",
@@ -175,11 +173,11 @@
       ]
     },
     {
-      "title": "AR/VR Applications Developer",
+      "title": "Desenvolvedor de aplicações AR/VR",
       "company": "Exsto",
       "start": "02/2019",
       "end": "12/2020",
-      "description": "Developer of Augmented Reality and Virtual Reality applications, also responsible for managing and organizing team tasks, acting as a leader for project creation.",
+      "description": "Desenvolvedor de aplicações em Realidade Aumentada e Realidade Virtual, também responsável por gerenciar e organizar as tarefas da equipe, atuando como líder para a criação de projetos.",
       "keywords": [
         "javaScript",
         "html",
@@ -200,11 +198,11 @@
       ]
     },
     {
-      "title": "Research Internship",
+      "title": "Estágio em Pesquisa",
       "company": "CDG Hub - Inatel",
       "start": "02/2018",
       "end": "11/2019",
-      "description": "Responsible for laboratory projects, conducting research and teaching mini-courses on Augmented Reality and Game Development.",
+      "description": "Responsável por projetos realizados no laboratório, conduzindo pesquisas além de ministrar mini-cursos sobre Realidade Aumentada e Desenvolvimento de Jogos.",
       "keywords": [
         "unity",
         "construct",
@@ -222,17 +220,12 @@
       ]
     },
     {
-      "title": "Web Development Internship",
+      "title": "Estágio em Web Development",
       "company": "4 Intelligence",
       "start": "08/2017",
       "end": "01/2018",
-      "description": "Web developer using Low Code tools and/or HTML/CSS/JS.",
-      "keywords": [
-        "html",
-        "css",
-        "javascript",
-        "lowcode"
-      ],
+      "description": "Desenvolvedor web utilizando ferramentas Low Code e/ou HTML/CSS/JS.",
+      "keywords": ["html", "css", "javascript", "lowcode"],
       "images": [],
       "icons": [
         "/assets/curriculum/skill-icons/javascript-svgrepo-com.svg",
@@ -243,11 +236,11 @@
   ],
   "education": [
     {
-      "degree": "Post-Graduation",
+      "degree": "Pós Graduação",
       "institution": "Inatel",
-      "description": "Mobile Development and Cloud Computing",
+      "description": "Desenvolvimento Mobile e Computação em Nuvem",
       "start": "02/2023",
-      "end": "Present",
+      "end": "Hoje",
       "keywords": [
         "java",
         "html",
@@ -283,73 +276,49 @@
       ]
     },
     {
-      "degree": "Multimedia Teaching Assistant",
+      "degree": "Monitoria de Multimídia",
       "institution": "Inatel",
-      "description": "Creation, planning and teaching of Multimedia classes in the laboratory, using Scilab software for Computer Engineering students.",
+      "description": "Criação, planejamento e ministração de aulas de Multimídia no laboratório, utilizando o software Scilab para estudantes de Engenharia da Computação.",
       "start": "07/2018",
       "end": "10/2018",
-      "keywords": [
-        "scilab",
-        "miltimídia"
-      ],
+      "keywords": ["scilab", "miltimídia"],
       "images": [],
-      "icons": [
-        "/assets/curriculum/skill-icons/scilab-svgrepo-com.svg"
-      ]
+      "icons": ["/assets/curriculum/skill-icons/scilab-svgrepo-com.svg"]
     },
     {
-      "degree": "OOP Teaching Assistant",
+      "degree": "Monitoria de POO",
       "institution": "Inatel",
-      "description": "Creation, planning and assistance in classes with the professor, in the Object-Oriented Programming discipline, aimed at 9th-term Biomedical students.",
+      "description": "Criação, planejamento auxílioe nas aulas junto do professor, na disciplina de Programação Orientada a Objetos, voltada para estudantes do 9º período de Biomédica.",
       "start": "07/2018",
       "end": "10/2018",
-      "keywords": [
-        "java",
-        "poo"
-      ],
+      "keywords": ["java", "poo"],
       "images": [],
-      "icons": [
-        "/assets/curriculum/skill-icons/java-svgrepo-com.svg"
-      ]
+      "icons": ["/assets/curriculum/skill-icons/java-svgrepo-com.svg"]
     },
     {
-      "degree": "Scientific Research",
+      "degree": "Iniciação Científica",
       "institution": "CDG Hub - Inatel",
-      "description": "Research on creating an educational game to help children and adults learn basic mathematics, using game mechanics similar to Fruit Ninja.",
+      "description": "Pesquisa na criação de um jogo educacional que auxilie crianças e adultos no aprendizado de matemática básica, utilizando mecânicas de jogo semelhantes às do Fruit Ninja.",
       "start": "02/2016",
       "end": "02/2017",
-      "keywords": [
-        "blender",
-        "modeling",
-        "game",
-        "unity",
-        "research"
-      ],
+      "keywords": ["blender", "modeling", "game", "unity", "research"],
       "images": [],
-      "icons": [
-        "/assets/curriculum/skill-icons/blender-svgrepo-com.svg"
-      ]
+      "icons": ["/assets/curriculum/skill-icons/blender-svgrepo-com.svg"]
     },
     {
-      "degree": "Graduation",
+      "degree": "Graduação",
       "institution": "Inatel",
-      "description": "Bachelor's Degree in Computer Engineering.",
+      "description": "Bacharelado em Engenharia da Computação.",
       "start": "01/2015",
       "end": "12/2019",
-      "keywords": [
-        "bacharelado",
-        "graduação",
-        "curso",
-        "engenharia",
-        "inatel"
-      ],
+      "keywords": ["bacharelado", "graduação", "curso", "engenharia", "inatel"],
       "images": [],
       "icons": []
     },
     {
-      "degree": "Extra Courses",
+      "degree": "Cursos Extras",
       "institution": "OnByte",
-      "description": "Hardware and Computer Maintenance, 120 hours<br>Web Design, 60 hours<br>Game Creation, 50 hours<br>Programming, 50 hours",
+      "description": "Hardware e Manutenção de Computadores, 120 horas<br>Web Design, 60 horas<br>Criação de Jogos, 50 horas<br>Programação, 50 horas",
       "start": "02/2013",
       "end": "12/2014",
       "keywords": [
@@ -378,7 +347,7 @@
   "projects": [
     {
       "name": "Liquid Hub",
-      "description": "Project for HoloLens mixed reality glasses and mobile phones, offered to Exsto Automation company. The project was implemented to visualize equipment and data in Mixed Reality and Augmented Reality.",
+      "description": "Projeto para o óculos de realidade mista Holo Lens e para celular, sendo oferecido para a empresa Exsto Automation. O projeto foi implementado para visualizar equipamentos e dados em Realidade Mista e Realidade Aumentada.",
       "keywords": [
         "unity",
         "c#",
@@ -404,14 +373,8 @@
     },
     {
       "name": "Broquim Game",
-      "description": "Free puzzle game for Android mobile devices.",
-      "keywords": [
-        "unity",
-        "c#",
-        "mobile",
-        "game",
-        "puzzle"
-      ],
+      "description": "Jogo de quebra-cabeça gratuito para dispositivos móveis Android.",
+      "keywords": ["unity", "c#", "mobile", "game", "puzzle"],
       "images": [
         "/assets/curriculum/images/broquim1.png",
         "/assets/curriculum/images/broquim2.png",
@@ -424,14 +387,8 @@
     },
     {
       "name": "EIA Project",
-      "description": "Mobile project to measure scoliosis angles based on photos.",
-      "keywords": [
-        "unity",
-        "c#",
-        "mobile",
-        "scoliosis",
-        "webgl"
-      ],
+      "description": "Projeto móvel para medir ângulos de escoliose com base em fotos.",
+      "keywords": ["unity", "c#", "mobile", "scoliosis", "webgl"],
       "images": [
         "/assets/curriculum/images/eia1.png",
         "/assets/curriculum/images/eia2.png",
@@ -523,54 +480,55 @@
   ],
   "extra_skills": [
     {
-      "name": "Image and Vector Editing",
-      "description": "Adobe Photoshop<br>Adobe Illustrator",
+      "name": "Edição de imagem e vetor",
+      "description": "Adobe Photoshop<br>Adobe Ilustrator",
       "type": "Design"
     },
     {
-      "name": "Electronic Music Creation",
+      "name": "Criação de música eletrônica",
       "description": "Fruit Loops Studio",
       "type": "Creative"
     },
     {
-      "name": "Advanced Presentation Creation",
+      "name": "Criação avançada de apresentações",
       "description": "Microsoft PowerPoint",
       "type": "Design"
     },
     {
-      "name": "Video Editing and Creation",
+      "name": "Edição e criação de vídeo",
       "description": "Sony Vegas<br>Adobe After Effects<br>Adobe Premiere",
       "type": "Design"
     },
     {
-      "name": "Public Speaking and Communication",
-      "description": "Speaker <br> Teacher/Monitor<br> Technical Lead",
+      "name": "Oratória e Comunicação",
+      "description": "Palestrante <br> Professor/Monitor<br> Líder Técnico",
       "type": "Soft Skill"
     },
     {
-      "name": "Quick Adaptation",
-      "description": "Use of different programming stacks;<br>Quick changes in business rules.",
+      "name": "Rápida adaptação",
+      "description": "Uso de stacks diferentes de programação;<br>Mudanças rápidas de regras de negócio.",
       "type": "Soft Skill"
     },
     {
-      "name": "Creativity",
-      "description": "Comprehensive view of programming areas;<br>Ability to express ideas in different contexts, visually or otherwise.",
+      "name": "Criatividade",
+      "description": "Visão abrangente das áreas de programação;<br>Habilidade para expressar ideias em diferentes contextos de forma visual ou não.",
       "type": "Soft Skill"
     },
     {
-      "name": "English",
-      "description": "Intermediate level; Reading and writing.",
+      "name": "Inglês",
+      "description": "Nível intermediário; Leitura e escrita.",
       "type": "Design"
     }
   ],
   "interests": [
-    "Playing digital games",
-    "Creating digital games",
-    "Creating gadgets",
-    "Watching movies",
-    "Meeting friends",
-    "Watching scientific or technology curiosity videos",
-    "Creating music playlists",
-    "Walking/Traveling"
+    "Jogar jogos digitais",
+    "Criar jogos digitais",
+    "Criar bugiganga",
+    "Assistir filmes",
+    "Encontrar com amigos",
+    "Ver vídeos de curiosidades cintíficas ou tecnologia",
+    "Criar playlists de musicas",
+    "Passear/Viajar"
   ]
 }
+
