@@ -9,7 +9,7 @@ window.onload = async function loadData() {
             const newElement = document.createElement('div');
             newElement.innerHTML = template.replace(/{{(.*?)}}/g, (_, keyToReplace) => {
                 if (keyToReplace.trim() === 'description') {
-                    const newDescription = `${item[keyToReplace.trim()]}<br><br>Palavras-chave:<br>${item.keywords.join(', ')}`;
+                    const newDescription = `${item[keyToReplace.trim()]}<br><br>Keywords:<br>${item.keywords.join(', ')}`;
                     return newDescription;
                 } else if (keyToReplace.trim() === 'images') {
                     const imagesDiv = document.createElement('div');
