@@ -24,10 +24,45 @@
   ],
   "experience": [
     {
+      "title": "Higher Education Lecturer",
+      "company": "National Institute of Telecommunications (Inatel)",
+      "start": "02/2026",
+      "end": "Present",
+      "description": "Lecturer in the Software Engineering and Computer Engineering undergraduate programs at the National Institute of Telecommunications (Inatel), teaching courses in programming, data structures, and data science.<br><br><strong>Courses taught:</strong><br>- Introduction to Engineering<br>- Algorithms and Data Structures I<br>- Programming Paradigms<br>- Data Science with Python<br>- Computer Graphics and Multimedia<br><br><strong>Areas of expertise:</strong><br>- Programming fundamentals and computational logic<br>- Programming languages (C/C++, Java, Python, Haskell, Prolog, among others)<br>- Data analysis and visualization<br>- Programming paradigms (imperative, functional, logic, and object-oriented)<br>- Graphical interfaces and multimedia processing<br><br>Committed to preparing professionals for the technology market by combining a strong theoretical foundation with practical application through projects and laboratory activities.",
+      "keywords": [
+        "teaching",
+        "higher education",
+        "programming",
+        "data structures",
+        "data science",
+        "python",
+        "java",
+        "c/c++",
+        "haskell",
+        "prolog",
+        "data analysis",
+        "data visualization",
+        "computer graphics",
+        "multimedia"
+      ],
+      "images": [],
+      "icons": [
+        "/assets/curriculum/skill-icons/python-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/java-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/cpp.svg",
+        "/assets/curriculum/skill-icons/javascript-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/typescript-logo-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/node-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/git-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/mongo-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/mysql-logo-svgrepo-com.svg"
+      ]
+    },
+    {
       "title": "Technical Lead",
       "company": "Inatel Competence Center",
       "start": "03/2024",
-      "end": "Present",
+      "end": "01/2026",
       "description": "Full-stack development and cooperative leadership in projects and their infrastructures.",
       "keywords": [
         "typescript",

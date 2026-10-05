@@ -24,10 +24,39 @@
   ],
   "experience": [
     {
+      "title": "Docente de Ensino Superior",
+      "company": "Instituto Nacional de Telecomunicações (Inatel)",
+      "start": "02/2026",
+      "end": "Hoje",
+      "description": "Docente de graduação nos cursos de Engenharia de Software e Engenharia da Computação do Instituto Nacional de Telecomunicações (Inatel), ministrando disciplinas nas áreas de programação, estruturas de dados e ciência de dados.<br><br><strong>Disciplinas lecionadas:</strong><br>- Introdução à Engenharia<br>- Algoritmos e Estrutura de Dados I<br>- Paradigmas da Programação<br>- Ciência de Dados com Python<br>- Computação Gráfica e Multimídia<br><br><strong>Áreas de atuação:</strong><br>- Fundamentos de programação e lógica computacional<br>- Linguagens de programação (C/C++, Java, Python, Haskell, Prolog, entre outras)<br>- Análise e visualização de dados<br>- Paradigmas de programação (imperativo, funcional, lógico e orientado a objetos)<br>- Interface gráfica e processamento multimídia<br><br>Comprometido com a formação de profissionais capacitados para o mercado de tecnologia, combinando fundamentação teórica sólida com aplicação prática através de projetos e atividades de laboratório.",
+      "keywords": [
+        "docência",
+        "ensino superior",
+        "programação",
+        "estruturas de dados",
+        "ciência de dados",
+        "python",
+        "java",
+        "c/c++",
+        "haskell",
+        "prolog",
+        "análise de dados",
+        "visualização de dados",
+        "computação gráfica",
+        "multimídia"
+      ],
+      "images": [],
+      "icons": [
+        "/assets/curriculum/skill-icons/python-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/java-svgrepo-com.svg",
+        "/assets/curriculum/skill-icons/scilab-svgrepo-com.svg"
+      ]
+    },
+    {
       "title": "Líder técnico",
       "company": "Inatel Competence Center",
       "start": "03/2024",
-      "end": "Hoje",
+      "end": "01/2026",
       "description": "Desenolvimento Full-stack e liderança cooperativa nos projetos e suas infraestruturas.",
       "keywords": [
         "typescript",
@@ -131,7 +160,9 @@
         "clean code",
         "rabbitmq"
       ],
-      "images": ["/assets/curriculum/images/toodoo.png"],
+      "images": [
+        "/assets/curriculum/images/toodoo.png"
+      ],
       "icons": [
         "/assets/curriculum/skill-icons/typescript-logo-svgrepo-com.svg",
         "/assets/curriculum/skill-icons/javascript-svgrepo-com.svg",
@@ -225,7 +256,12 @@
       "start": "08/2017",
       "end": "01/2018",
       "description": "Desenvolvedor web utilizando ferramentas Low Code e/ou HTML/CSS/JS.",
-      "keywords": ["html", "css", "javascript", "lowcode"],
+      "keywords": [
+        "html",
+        "css",
+        "javascript",
+        "lowcode"
+      ],
       "images": [],
       "icons": [
         "/assets/curriculum/skill-icons/javascript-svgrepo-com.svg",
@@ -281,9 +317,14 @@
       "description": "Criação, planejamento e ministração de aulas de Multimídia no laboratório, utilizando o software Scilab para estudantes de Engenharia da Computação.",
       "start": "07/2018",
       "end": "10/2018",
-      "keywords": ["scilab", "miltimídia"],
+      "keywords": [
+        "scilab",
+        "miltimídia"
+      ],
       "images": [],
-      "icons": ["/assets/curriculum/skill-icons/scilab-svgrepo-com.svg"]
+      "icons": [
+        "/assets/curriculum/skill-icons/scilab-svgrepo-com.svg"
+      ]
     },
     {
       "degree": "Monitoria de POO",
@@ -291,9 +332,14 @@
       "description": "Criação, planejamento auxílioe nas aulas junto do professor, na disciplina de Programação Orientada a Objetos, voltada para estudantes do 9º período de Biomédica.",
       "start": "07/2018",
       "end": "10/2018",
-      "keywords": ["java", "poo"],
+      "keywords": [
+        "java",
+        "poo"
+      ],
       "images": [],
-      "icons": ["/assets/curriculum/skill-icons/java-svgrepo-com.svg"]
+      "icons": [
+        "/assets/curriculum/skill-icons/java-svgrepo-com.svg"
+      ]
     },
     {
       "degree": "Iniciação Científica",
@@ -301,9 +347,17 @@
       "description": "Pesquisa na criação de um jogo educacional que auxilie crianças e adultos no aprendizado de matemática básica, utilizando mecânicas de jogo semelhantes às do Fruit Ninja.",
       "start": "02/2016",
       "end": "02/2017",
-      "keywords": ["blender", "modeling", "game", "unity", "research"],
+      "keywords": [
+        "blender",
+        "modeling",
+        "game",
+        "unity",
+        "research"
+      ],
       "images": [],
-      "icons": ["/assets/curriculum/skill-icons/blender-svgrepo-com.svg"]
+      "icons": [
+        "/assets/curriculum/skill-icons/blender-svgrepo-com.svg"
+      ]
     },
     {
       "degree": "Graduação",
@@ -311,7 +365,13 @@
       "description": "Bacharelado em Engenharia da Computação.",
       "start": "01/2015",
       "end": "12/2019",
-      "keywords": ["bacharelado", "graduação", "curso", "engenharia", "inatel"],
+      "keywords": [
+        "bacharelado",
+        "graduação",
+        "curso",
+        "engenharia",
+        "inatel"
+      ],
       "images": [],
       "icons": []
     },
@@ -374,7 +434,13 @@
     {
       "name": "Broquim Game",
       "description": "Jogo de quebra-cabeça gratuito para dispositivos móveis Android.",
-      "keywords": ["unity", "c#", "mobile", "game", "puzzle"],
+      "keywords": [
+        "unity",
+        "c#",
+        "mobile",
+        "game",
+        "puzzle"
+      ],
       "images": [
         "/assets/curriculum/images/broquim1.png",
         "/assets/curriculum/images/broquim2.png",
@@ -388,7 +454,13 @@
     {
       "name": "EIA Project",
       "description": "Projeto móvel para medir ângulos de escoliose com base em fotos.",
-      "keywords": ["unity", "c#", "mobile", "scoliosis", "webgl"],
+      "keywords": [
+        "unity",
+        "c#",
+        "mobile",
+        "scoliosis",
+        "webgl"
+      ],
       "images": [
         "/assets/curriculum/images/eia1.png",
         "/assets/curriculum/images/eia2.png",
@@ -531,4 +603,3 @@
     "Passear/Viajar"
   ]
 }
-
