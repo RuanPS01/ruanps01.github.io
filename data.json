@@ -501,7 +501,7 @@
     },
     {
       "name": "Python",
-      "level": 3
+      "level": 4
     },
     {
       "name": "C#",
@@ -509,14 +509,14 @@
     },
     {
       "name": "Java",
-      "level": 2
-    },
-    {
-      "name": "R",
-      "level": 1
+      "level": 3
     },
     {
       "name": "C++",
+      "level": 3
+    },
+    {
+      "name": "R",
       "level": 1
     },
     {
